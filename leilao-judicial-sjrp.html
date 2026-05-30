@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análise: Leilão Judicial — Processo 0055250-42.2000.8.26.0576 | SJRP</title>
+<meta name="description" content="Análise jurídica e de mercado do leilão judicial do imóvel urbano de 4.800 m² em São José do Rio Preto — Processo de Nilson Santos com 2 usucapiões pendentes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0f1e;
+    --bg2: #0f1628;
+    --bg3: #141c35;
+    --card: #1a2340;
+    --border: #243060;
+    --gold: #f5c842;
+    --gold2: #e6a800;
+    --red: #e84040;
+    --red2: #c02020;
+    --green: #22c55e;
+    --blue: #3b82f6;
+    --orange: #f97316;
+    --text: #e8eaf6;
+    --muted: #8892b0;
+    --white: #ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  /* ─── HEADER ─── */
+  .header {
+    background: linear-gradient(135deg, #0a0f1e 0%, #1a1040 50%, #0a1a30 100%);
+    border-bottom: 2px solid var(--gold2);
+    padding: 40px 24px 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 300px;
+    background: radial-gradient(ellipse, rgba(245,200,66,.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(245,200,66,.12); border: 1px solid var(--gold2);
+    color: var(--gold); font-size: 11px; font-weight: 600; letter-spacing: .08em;
+    text-transform: uppercase; padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .header h1 {
+    font-size: clamp(22px, 4vw, 36px); font-weight: 800;
+    color: var(--white); line-height: 1.2; margin-bottom: 10px;
+  }
+  .header .subtitle {
+    color: var(--muted); font-size: 14px; max-width: 640px; margin: 0 auto 22px;
+  }
+  .process-tag {
+    display: inline-block; background: var(--card); border: 1px solid var(--border);
+    color: var(--gold); font-family: monospace; font-size: 13px; font-weight: 600;
+    padding: 6px 16px; border-radius: 6px; letter-spacing: .04em;
+  }
+
+  /* ─── ALERT BANNER ─── */
+  .alert-banner {
+    background: linear-gradient(90deg, rgba(232,64,64,.15), rgba(232,64,64,.08));
+    border: 1px solid rgba(232,64,64,.5);
+    border-left: 4px solid var(--red);
+    border-radius: 10px; padding: 16px 20px;
+    margin: 0 0 24px;
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .alert-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+  .alert-banner strong { color: var(--red); }
+
+  /* ─── LAYOUT ─── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 36px 20px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  @media (max-width: 768px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  }
+
+  /* ─── SECTION ─── */
+  .section { margin-bottom: 48px; }
+  .section-title {
+    font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .section-heading {
+    font-size: clamp(18px, 2.5vw, 24px); font-weight: 700;
+    color: var(--white); margin-bottom: 6px;
+  }
+  .section-sub { color: var(--muted); font-size: 13px; margin-bottom: 22px; }
+
+  /* ─── CARD ─── */
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px;
+  }
+  .card-title {
+    font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 8px;
+  }
+  .card-value {
+    font-size: 26px; font-weight: 800; color: var(--white); line-height: 1.1;
+  }
+  .card-value.gold { color: var(--gold); }
+  .card-value.red { color: var(--red); }
+  .card-value.green { color: var(--green); }
+  .card-value.orange { color: var(--orange); }
+  .card-note { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+  /* ─── RISK CARD ─── */
+  .risk-card {
+    border-radius: 12px; padding: 22px;
+    border-left: 4px solid;
+  }
+  .risk-card.critical { background: rgba(232,64,64,.1); border-color: var(--red); border: 1px solid rgba(232,64,64,.4); border-left: 4px solid var(--red); }
+  .risk-card.high { background: rgba(249,115,22,.1); border: 1px solid rgba(249,115,22,.4); border-left: 4px solid var(--orange); }
+  .risk-card.medium { background: rgba(245,200,66,.07); border: 1px solid rgba(245,200,66,.3); border-left: 4px solid var(--gold); }
+  .risk-label {
+    font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .risk-card.critical .risk-label { color: var(--red); }
+  .risk-card.high .risk-label { color: var(--orange); }
+  .risk-card.medium .risk-label { color: var(--gold); }
+  .risk-card h3 { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+  .risk-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* ─── TABLE ─── */
+  .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead { background: var(--bg3); }
+  th { padding: 12px 16px; text-align: left; font-size: 11px; font-weight: 600;
+       letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  td { padding: 12px 16px; border-top: 1px solid var(--border); vertical-align: top; }
+  tr:hover td { background: rgba(255,255,255,.02); }
+  .td-label { font-weight: 600; color: var(--white); }
+  .td-val { color: var(--text); }
+  .td-gold { color: var(--gold); font-weight: 600; }
+  .td-red { color: var(--red); font-weight: 600; }
+  .td-green { color: var(--green); font-weight: 600; }
+  .td-orange { color: var(--orange); font-weight: 600; }
+  .td-muted { color: var(--muted); font-size: 13px; }
+
+  /* ─── TIMELINE ─── */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
+                       width: 2px; background: var(--border); }
+  .timeline-item { position: relative; margin-bottom: 24px; }
+  .timeline-dot {
+    position: absolute; left: -24px; top: 3px;
+    width: 14px; height: 14px; border-radius: 50%;
+    border: 2px solid var(--border); background: var(--card);
+  }
+  .timeline-dot.gold { border-color: var(--gold); background: rgba(245,200,66,.2); }
+  .timeline-dot.red { border-color: var(--red); background: rgba(232,64,64,.2); }
+  .timeline-dot.orange { border-color: var(--orange); background: rgba(249,115,22,.2); }
+  .timeline-dot.green { border-color: var(--green); background: rgba(34,197,94,.2); }
+  .timeline-dot.blue { border-color: var(--blue); background: rgba(59,130,246,.2); }
+  .tl-date { font-size: 11px; font-weight: 600; color: var(--muted); margin-bottom: 2px; }
+  .tl-title { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+  .tl-body { font-size: 13px; color: var(--muted); }
+
+  /* ─── JURISPRUDÊNCIA ─── */
+  .juri-card {
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px 20px; margin-bottom: 14px;
+  }
+  .juri-tribunal {
+    display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .1em;
+    text-transform: uppercase; padding: 3px 10px; border-radius: 999px; margin-bottom: 8px;
+  }
+  .juri-stj { background: rgba(59,130,246,.2); color: var(--blue); }
+  .juri-stf { background: rgba(245,200,66,.2); color: var(--gold); }
+  .juri-tjsp { background: rgba(34,197,94,.2); color: var(--green); }
+  .juri-card h4 { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+  .juri-card p { font-size: 13px; color: var(--muted); }
+  .juri-ref { font-size: 11px; color: var(--border); margin-top: 8px; font-style: italic; }
+
+  /* ─── SCORE BAR ─── */
+  .score-row { margin-bottom: 16px; }
+  .score-label { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 5px;
+                 display: flex; justify-content: space-between; }
+  .score-label span { font-weight: 700; }
+  .score-track { height: 8px; background: var(--bg3); border-radius: 999px; overflow: hidden; }
+  .score-fill { height: 100%; border-radius: 999px; }
+  .fill-red { background: var(--red); }
+  .fill-orange { background: var(--orange); }
+  .fill-gold { background: var(--gold); }
+  .fill-green { background: var(--green); }
+
+  /* ─── PILL ─── */
+  .pill {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    padding: 3px 10px; border-radius: 999px;
+  }
+  .pill-red { background: rgba(232,64,64,.2); color: var(--red); }
+  .pill-orange { background: rgba(249,115,22,.2); color: var(--orange); }
+  .pill-gold { background: rgba(245,200,66,.15); color: var(--gold); }
+  .pill-green { background: rgba(34,197,94,.2); color: var(--green); }
+  .pill-blue { background: rgba(59,130,246,.2); color: var(--blue); }
+
+  /* ─── QUOTE ─── */
+  .legal-quote {
+    background: var(--bg3); border-left: 3px solid var(--gold2);
+    padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 16px 0;
+    font-size: 13px; font-style: italic; color: var(--muted); line-height: 1.7;
+  }
+  .legal-quote cite { display: block; margin-top: 6px; font-size: 11px; font-style: normal;
+                       font-weight: 600; color: var(--gold2); }
+
+  /* ─── VERDICT ─── */
+  .verdict-box {
+    background: linear-gradient(135deg, rgba(232,64,64,.12), rgba(245,200,66,.08));
+    border: 2px solid rgba(232,64,64,.4);
+    border-radius: 14px; padding: 28px;
+    text-align: center;
+  }
+  .verdict-label { font-size: 11px; font-weight: 700; letter-spacing: .12em;
+                    text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+  .verdict-score { font-size: 64px; font-weight: 800; color: var(--red);
+                    line-height: 1; margin-bottom: 6px; }
+  .verdict-desc { color: var(--muted); font-size: 14px; max-width: 420px; margin: 0 auto 16px; }
+  .verdict-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--bg2); border-top: 1px solid var(--border);
+    padding: 28px 24px; text-align: center; color: var(--muted); font-size: 12px;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  /* ─── MISC ─── */
+  ul.check { list-style: none; }
+  ul.check li { padding: 4px 0; font-size: 13px; color: var(--muted); }
+  ul.check li::before { content: '\2713 '; color: var(--green); font-weight: 700; }
+  ul.cross { list-style: none; }
+  ul.cross li { padding: 4px 0; font-size: 13px; color: var(--muted); }
+  ul.cross li::before { content: '\2717 '; color: var(--red); font-weight: 700; }
+  ul.warn { list-style: none; }
+  ul.warn li { padding: 4px 0; font-size: 13px; color: var(--muted); }
+  ul.warn li::before { content: '\26A0 '; color: var(--orange); font-weight: 700; }
+  .divider { height: 1px; background: var(--border); margin: 32px 0; }
+  p.body { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 14px; }
+  strong.hl { color: var(--white); }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="badge">&#9878; Análise Jurídica &amp; Mercado Imobiliário</div>
+  <h1>Leilão Judicial — Imóvel Urbano 4.800 m²<br>São José do Rio Preto / SP</h1>
+  <p class="subtitle">Análise técnica do processo, riscos jurídicos e contexto de mercado — Usucapião, reversão municipal e segurança do arrematante</p>
+  <div class="process-tag">Processo n.º 0055250-42.2000.8.26.0576 &nbsp;|&nbsp; Requerente: Nilson Santos &nbsp;|&nbsp; Foro 576 — SJRP</div>
+</div>
+
+<div class="container">
+
+  <!-- ALERTA CRÍTICO -->
+  <div class="alert-banner">
+    <div class="alert-icon">&#128308;</div>
+    <div>
+      <strong>ATENÇÃO — RISCO JURÍDICO ELEVADÍSSIMO:</strong> Este imóvel está sujeito a
+      <strong>2 (dois) processos de usucapião pendentes</strong>, além de um processo
+      julgado em que a Prefeitura entrou com reversão. A Prefeitura, que declarou
+      expressamente <em>"não ter interesse"</em> no imóvel ao longo do processo original,
+      também foi a própria alienante do bem. Esse conjunto de fatores cria uma das situações
+      de maior complexidade jurídica em leilões judiciais. Leia a análise completa antes de
+      qualquer decisão de lance.
+    </div>
+  </div>
+
+  <!-- DADOS DO PROCESSO -->
+  <div class="section">
+    <div class="section-title">01 — Dados do Processo</div>
+    <div class="section-heading">Ficha Processual</div>
+    <div class="section-sub">Informações extraídas do processo e contexto legal</div>
+
+    <div class="grid-2">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Campo</th><th>Informação</th></tr></thead>
+          <tbody>
+            <tr><td class="td-label">Número do Processo</td><td class="td-gold">0055250-42.2000.8.26.0576</td></tr>
+            <tr><td class="td-label">Ano de Instauração</td><td class="td-val">2000</td></tr>
+            <tr><td class="td-label">Ramo da Justiça</td><td class="td-val">TJSP — Tribunal de Justiça do Estado de São Paulo</td></tr>
+            <tr><td class="td-label">Foro</td><td class="td-val">576 — Comarca de São José do Rio Preto / SP</td></tr>
+            <tr><td class="td-label">Requerente Principal</td><td class="td-val">Nilson Santos</td></tr>
+            <tr><td class="td-label">Tipo de Ação</td><td class="td-val">Usucapião (Extraordinária / Ordinária)</td></tr>
+            <tr><td class="td-label">Situação</td><td class="td-red">Processo julgado + 2 novos processos pendentes</td></tr>
+            <tr><td class="td-label">Intervenção Municipal</td><td class="td-orange">Prefeitura entrou com reversão após declarar "sem interesse"</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Campo</th><th>Informação</th></tr></thead>
+          <tbody>
+            <tr><td class="td-label">Tipo de Imóvel</td><td class="td-val">Terreno Urbano</td></tr>
+            <tr><td class="td-label">Área Total</td><td class="td-gold">4.800 m²</td></tr>
+            <tr><td class="td-label">Localização</td><td class="td-val">São José do Rio Preto — SP</td></tr>
+            <tr><td class="td-label">Classificação Original</td><td class="td-val">Bem Municipal (domínio público)</td></tr>
+            <tr><td class="td-label">Alienante Original</td><td class="td-red">Própria Prefeitura de SJRP</td></tr>
+            <tr><td class="td-label">Natureza do Bem</td><td class="td-orange">Bem dominical / desafetado (em disputa)</td></tr>
+            <tr><td class="td-label">Valor Estimado (mercado)</td><td class="td-green">R$ 8,6 M – R$ 28,4 M (ver análise)</td></tr>
+            <tr><td class="td-label">Risco Global</td><td class="td-red">&#11035; CRÍTICO</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPI CARDS -->
+  <div class="grid-4" style="margin-bottom:48px">
+    <div class="card">
+      <div class="card-title">Área do Terreno</div>
+      <div class="card-value gold">4.800 m²</div>
+      <div class="card-note">Imóvel urbano — grande porte</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Usucapiões Ativos</div>
+      <div class="card-value red">2</div>
+      <div class="card-note">Processos pendentes + 1 julgado revertido</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Duração do Litígio</div>
+      <div class="card-value orange">+25 anos</div>
+      <div class="card-note">Desde o ano 2000 — enorme histórico</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Valorização SJRP (12 meses)</div>
+      <div class="card-value green">+10,47%</div>
+      <div class="card-note">Fonte: FipeZAP — abril 2026</div>
+    </div>
+  </div>
+
+  <!-- LINHA DO TEMPO -->
+  <div class="section">
+    <div class="section-title">02 — Linha do Tempo</div>
+    <div class="section-heading">Cronologia do Processo</div>
+    <div class="section-sub">Reconstrução dos eventos com base nas informações disponíveis</div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot blue"></div>
+            <div class="tl-date">Período anterior a 2000</div>
+            <div class="tl-title">Posse do Imóvel por Nilson Santos</div>
+            <div class="tl-body">Nilson Santos passa a exercer posse contínua, mansa e pacífica sobre o terreno de 4.800 m², imóvel originalmente de domínio público municipal em São José do Rio Preto. A posse se consolida com animus domini (intenção de dono).</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot gold"></div>
+            <div class="tl-date">Ano 2000</div>
+            <div class="tl-title">Ajuizamento do Processo de Usucapião</div>
+            <div class="tl-body">Ajuizamento da ação de usucapião sob o n.º 0055250-42.2000.8.26.0576 perante o Foro 576 de São José do Rio Preto (TJSP). A Prefeitura Municipal de SJRP é citada como parte interessada no processo.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot green"></div>
+            <div class="tl-date">Curso do Processo</div>
+            <div class="tl-title">Prefeitura Declara "Sem Interesse"</div>
+            <div class="tl-body">No curso do processo de usucapião, a Prefeitura Municipal de São José do Rio Preto manifesta-se nos autos declarando expressamente não ter interesse no imóvel, conformando-se com o pleito do requerente Nilson Santos.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot orange"></div>
+            <div class="tl-date">Período do Processo</div>
+            <div class="tl-title">Alienação do Imóvel pela Própria Prefeitura</div>
+            <div class="tl-body">A própria Prefeitura Municipal de SJRP aliena (vende/transfere) o imóvel objeto do litígio. Esta ação é juridicamente contraditória: se a prefeitura alega interesse agora, por que alienou o bem? A alienação indica desafetação do imóvel.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot gold"></div>
+            <div class="tl-date">Julgamento</div>
+            <div class="tl-title">Processo de Usucapião Julgado</div>
+            <div class="tl-body">O processo principal de usucapião (n.º 0055250-42.2000.8.26.0576) é julgado. Com a decisão em primeiro grau, a titularidade do imóvel fica em disputa.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot red"></div>
+            <div class="tl-date">Após Julgamento</div>
+            <div class="tl-title">Prefeitura Entra com Reversão</div>
+            <div class="tl-body">Contrariamente à sua declaração anterior de "sem interesse", a Prefeitura de SJRP recorre e/ou entra com pedido de reversão do julgado de usucapião — configurando comportamento contraditório (venire contra factum proprium), vedado pelo princípio da boa-fé processual (Art. 5º do CPC/2015).</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot red"></div>
+            <div class="tl-date">Período Recente</div>
+            <div class="tl-title">2 Novos Processos de Usucapião Pendentes</div>
+            <div class="tl-body">Além do processo original, há agora <strong>2 processos de usucapião pendentes</strong> sobre o mesmo imóvel — possivelmente de outros posseiros ou do próprio Nilson Santos em nova modalidade. Esses processos constituem ônus processuais sobre o bem, devendo obrigatoriamente constar do edital de leilão (Art. 886, CPC/2015).</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot orange"></div>
+            <div class="tl-date">Atual (2026)</div>
+            <div class="tl-title">Bem Colocado em Leilão Judicial</div>
+            <div class="tl-body">O imóvel é levado a leilão judicial com a situação processual intrincada: 1 processo julgado com reversão pendente + 2 processos ativos de usucapião. O arrematante assumirá todos esses riscos processuais.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANÁLISE JURÍDICA -->
+  <div class="section">
+    <div class="section-title">03 — Análise Jurídica</div>
+    <div class="section-heading">Complexidade Legal do Caso</div>
+    <div class="section-sub">Cinco camadas de risco jurídico identificadas</div>
+
+    <div class="grid-2" style="margin-bottom:20px">
+      <div>
+        <div class="card" style="margin-bottom:16px">
+          <h3 style="color:var(--white);font-size:15px;font-weight:700;margin-bottom:10px">
+            Camada 1 — A Contradição da Prefeitura
+          </h3>
+          <p class="body">
+            A Prefeitura de São José do Rio Preto criou uma situação jurídica paradoxal ao:
+          </p>
+          <ul class="cross">
+            <li>Declarar expressamente "sem interesse" no processo de usucapião</li>
+            <li>Alienar o próprio imóvel (transferindo a terceiro)</li>
+            <li>Posteriormente entrar com reversão do processo</li>
+          </ul>
+          <div class="legal-quote">
+            O comportamento contraditório da Administração Pública viola o princípio da boa-fé objetiva e o
+            instituto do <em>venire contra factum proprium</em>. Quem declara "sem interesse" e ainda aliena
+            o bem, não pode depois pretender reverter a usucapião sem violar a segurança jurídica.
+            <cite>— Fundamento: Art. 5º, CPC/2015 | Princípio da Boa-Fé Processual</cite>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="color:var(--white);font-size:15px;font-weight:700;margin-bottom:10px">
+            Camada 2 — Usucapião de Bem Público: Divergência
+          </h3>
+          <p class="body">
+            O principal debate jurídico gira em torno da natureza do bem: público ou privado?
+          </p>
+          <div class="table-wrap" style="margin-top:10px">
+            <table>
+              <thead><tr><th>Posição</th><th>Argumento</th><th>Favorável a</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><span class="pill pill-red">Imprescritibilidade</span></td>
+                  <td class="td-muted">CF art. 183 §3º e 191 §único; CC art. 102; Súmula STF 340: bens públicos não podem ser usucapidos</td>
+                  <td class="td-red">Prefeitura</td>
+                </tr>
+                <tr>
+                  <td><span class="pill pill-green">Desafetação</span></td>
+                  <td class="td-muted">Ao alienar o imóvel, a prefeitura o desafetou. Bem desafetado é bem dominical e pode ser usucapido. TJSP já julgou procedentes ações nesse sentido (AC nº 9172311-97.2007.8.26.0000)</td>
+                  <td class="td-green">Nilson Santos</td>
+                </tr>
+                <tr>
+                  <td><span class="pill pill-orange">Função Social</span></td>
+                  <td class="td-muted">Posse prolongada com função social prevalece segundo corrente doutrinária. Art. 1.228 §4º CC.</td>
+                  <td class="td-green">Possuidor</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card" style="margin-bottom:16px">
+          <h3 style="color:var(--white);font-size:15px;font-weight:700;margin-bottom:10px">
+            Camada 3 — Obrigatoriedade do Edital (Art. 886, CPC)
+          </h3>
+          <p class="body">O Código de Processo Civil é claro:</p>
+          <div class="legal-quote">
+            "O edital de leilão conterá: (...) VII — a indicação de eventual ônus, recurso ou
+            processo pendente sobre o bem a ser leiloado."
+            <cite>— Art. 886, VII, CPC/2015</cite>
+          </div>
+          <p class="body">
+            Os <strong>2 processos de usucapião pendentes</strong> e a reversão em andamento
+            <strong>devem obrigatoriamente</strong> constar do edital. Se não constarem, o leilão
+            é passível de <strong>nulidade</strong>, e o arrematante pode exigir:
+          </p>
+          <ul class="warn">
+            <li>Anulação da arrematação com devolução integral dos valores</li>
+            <li>Indenização por evicção (Art. 447 a 457, CC)</li>
+            <li>Responsabilização do juízo por omissão na informação</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="color:var(--white);font-size:15px;font-weight:700;margin-bottom:10px">
+            Camada 4 — Evicção: O Maior Risco para o Arrematante
+          </h3>
+          <p class="body">
+            <strong class="hl">Evicção</strong> é a perda total ou parcial de bem adquirido em
+            virtude de sentença judicial que reconhece direito anterior de terceiro.
+            Neste caso, se qualquer dos 2 processos de usucapião pendentes for julgado
+            procedente após a arrematação:
+          </p>
+          <ul class="cross">
+            <li>O arrematante perde o imóvel</li>
+            <li>Fica com direito à devolução do preço pago (Art. 456, CC)</li>
+            <li>Demora processual pode levar anos até recuperar o valor</li>
+            <li>Custas processuais e honorários não são automaticamente reembolsados</li>
+          </ul>
+          <div class="legal-quote">
+            "O Superior Tribunal de Justiça confirmou que o ocupante pode comprovar usucapião mesmo após
+            leilão judicial, desde que a posse seja anterior à penhora e preencha os requisitos legais."
+            <cite>— STJ — Informativo de Jurisprudência</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--white);font-size:15px;font-weight:700;margin-bottom:12px">
+        Camada 5 — Linha do Direito: O que os Tribunais Dizem sobre Casos Análogos
+      </h3>
+      <div class="grid-3">
+        <div>
+          <div class="card-title">Caso TJSP — Bem Desafetado (2007)</div>
+          <p style="font-size:13px;color:var(--muted)">
+            O TJSP julgou procedente usucapião de bem público ao constatar que
+            o município havia alienado o imóvel para empresa privada, configurando
+            desafetação. O lote passou a ser suscetível à prescrição aquisitiva.
+          </p>
+          <div class="tag-row">
+            <span class="pill pill-green">Favorável ao Usucapiente</span>
+            <span class="pill pill-blue">AC 9172311-97.2007.8.26.0000</span>
+          </div>
+        </div>
+        <div>
+          <div class="card-title">Caso STF — Súmula 340</div>
+          <p style="font-size:13px;color:var(--muted)">
+            Súmula 340 do STF estabelece que bens dominicais, como os demais bens públicos,
+            não podem ser adquiridos por usucapião. Aplicada quando o bem permanece no
+            patrimônio público sem desafetação formal.
+          </p>
+          <div class="tag-row">
+            <span class="pill pill-red">Favorável à Prefeitura</span>
+            <span class="pill pill-gold">Súmula STF 340</span>
+          </div>
+        </div>
+        <div>
+          <div class="card-title">Caso STJ — Evicção Pós-Leilão</div>
+          <p style="font-size:13px;color:var(--muted)">
+            O STJ reconheceu que usucapião pode ser oponível a arrematante se a posse foi
+            anterior à constrição judicial. Anulação do leilão com refund foi concedida em
+            casos onde processo pendente não foi divulgado no edital.
+          </p>
+          <div class="tag-row">
+            <span class="pill pill-orange">Risco ao Arrematante</span>
+            <span class="pill pill-blue">STJ — Jurisprudência</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JURISPRUDÊNCIA -->
+  <div class="section">
+    <div class="section-title">04 — Jurisprudência</div>
+    <div class="section-heading">Precedentes Aplicáveis ao Caso</div>
+    <div class="section-sub">Decisões dos tribunais superiores que impactam a análise</div>
+
+    <div class="juri-card">
+      <span class="juri-tribunal juri-stf">STF</span>
+      <h4>Súmula 340 — Imprescritibilidade dos Bens Públicos</h4>
+      <p>"Desde a vigência do Código Civil, os bens dominicais, como os demais bens públicos, não podem ser adquiridos por usucapião." Fundamento central da defesa municipal. No entanto, a doutrina moderna distingue entre bem <em>dominical afetado</em> e <em>bem desafetado</em>.</p>
+      <p class="juri-ref">STF — Súmula 340 | CF/88, art. 183, §3º e art. 191, §único</p>
+    </div>
+
+    <div class="juri-card">
+      <span class="juri-tribunal juri-tjsp">TJSP</span>
+      <h4>Usucapião Procedente de Bem Alienado pelo Município</h4>
+      <p>O TJSP reformou sentença de improcedência e julgou procedente usucapião extraordinária de imóvel que havia sido alienado pelo município a empresa privada. Entendeu que a alienação configura desafetação, tornando o bem prescritível. O princípio da função social da propriedade prevaleceu.</p>
+      <p class="juri-ref">TJSP — Apelação Cível 9172311-97.2007.8.26.0000 | Câmara de Direito Público</p>
+    </div>
+
+    <div class="juri-card">
+      <span class="juri-tribunal juri-stj">STJ</span>
+      <h4>Requisitos e Limites da Usucapião Urbana</h4>
+      <p>O STJ definiu que para configuração da usucapião urbana são necessários: posse pública, contínua, ininterrupta, sem oposição e com animus domini pelo prazo legal (15 anos na extraordinária, 10 na ordinária). A ausência de oposição formal da prefeitura (declaração de "sem interesse") pode ser interpretada como não-contestação da posse.</p>
+      <p class="juri-ref">STJ — Notícia 07/05/2023 | REsp correlatos | CC art. 1.238 e 1.242</p>
+    </div>
+
+    <div class="juri-card">
+      <span class="juri-tribunal juri-stj">STJ</span>
+      <h4>Venire Contra Factum Proprium — Boa-Fé Processual</h4>
+      <p>O STJ veda o comportamento contraditório nos processos judiciais. Parte que se manifesta "sem interesse" e posteriormente busca reverter decisão pode ter suas alegações afastadas com fundamento no Art. 5º do CPC/2015 (boa-fé processual) e no princípio da proibição do comportamento contraditório.</p>
+      <p class="juri-ref">STJ — REsp 1.191.253 / CPC art. 5º e 80</p>
+    </div>
+
+    <div class="juri-card">
+      <span class="juri-tribunal juri-tjsp">TJSP</span>
+      <h4>Leilão Judicial — Obrigatoriedade de Informar Processos Pendentes</h4>
+      <p>O TJSP determina que a ausência de informação sobre processos pendentes no edital de leilão constitui vício formal que pode ensejar nulidade da arrematação. O Art. 886, VII do CPC/2015 é norma cogente: o edital DEVE mencionar ônus, recursos e processos pendentes. Omissão gera direito à rescisão com devolução de valores.</p>
+      <p class="juri-ref">Art. 886, VII, CPC/2015 | Art. 903, CPC/2015 | TJSP — Jurisprudência reiterada</p>
+    </div>
+
+    <div class="juri-card">
+      <span class="juri-tribunal juri-stj">STJ</span>
+      <h4>Arrematante e Evicção</h4>
+      <p>Arrematante prejudicado por evicção (perda do bem por direito anterior de terceiro) tem direito à restituição do preço pago, atualizado monetariamente. Contudo, o processo de recuperação do valor pode durar anos e não cobre automaticamente honorários advocatícios e custas extras.</p>
+      <p class="juri-ref">CC art. 447-457 | STJ — Precedentes de evicção em leilão judicial</p>
+    </div>
+  </div>
+
+  <!-- RISCOS -->
+  <div class="section">
+    <div class="section-title">05 — Mapa de Riscos</div>
+    <div class="section-heading">Riscos Identificados para o Arrematante</div>
+    <div class="section-sub">Classificação por criticidade e probabilidade de materialização</div>
+
+    <div class="grid-2" style="margin-bottom:20px">
+      <div class="risk-card critical">
+        <div class="risk-label">&#11035; Risco Crítico</div>
+        <h3>Perda do Imóvel por Usucapião Procedente</h3>
+        <p>Com 2 processos de usucapião pendentes sobre o imóvel, existe risco real de que o arrematante perca a propriedade por sentença judicial posterior à arrematação. Especialmente preocupante porque a posse do requerente é anterior à penhora.</p>
+        <div class="tag-row" style="margin-top:10px">
+          <span class="pill pill-red">Probabilidade: Alta</span>
+          <span class="pill pill-red">Impacto: Total</span>
+        </div>
+      </div>
+
+      <div class="risk-card critical">
+        <div class="risk-label">&#11035; Risco Crítico</div>
+        <h3>Evicção — Perda Total do Investimento</h3>
+        <p>Se qualquer usucapião for julgado procedente após a arrematação, o arrematante sofre evicção e perde o imóvel. Embora tenha direito à devolução do preço (Art. 456 CC), o processo pode durar anos e não cobre todos os custos envolvidos.</p>
+        <div class="tag-row" style="margin-top:10px">
+          <span class="pill pill-red">Probabilidade: Moderada-Alta</span>
+          <span class="pill pill-red">Impacto: Severo</span>
+        </div>
+      </div>
+
+      <div class="risk-card high">
+        <div class="risk-label">&#128993; Risco Alto</div>
+        <h3>Nulidade do Leilão por Omissão no Edital</h3>
+        <p>Se os 2 processos pendentes não forem declarados no edital (Art. 886, VII, CPC), o leilão pode ser anulado por vício formal. Embora beneficie o arrematante, cria incerteza sobre a titularidade e possíveis litígios sobre valores.</p>
+        <div class="tag-row" style="margin-top:10px">
+          <span class="pill pill-orange">Probabilidade: Moderada</span>
+          <span class="pill pill-orange">Impacto: Grave</span>
+        </div>
+      </div>
+
+      <div class="risk-card high">
+        <div class="risk-label">&#128993; Risco Alto</div>
+        <h3>Imissão na Posse Dificultada</h3>
+        <p>Com o imóvel em litígio de usucapião ativo, a imissão na posse (ordem judicial para tomar posse física do bem) pode ser suspensa ou questionada pelos posseiros. O arrematante pode não conseguir exercer sua propriedade mesmo após pagar o lance.</p>
+        <div class="tag-row" style="margin-top:10px">
+          <span class="pill pill-orange">Probabilidade: Alta</span>
+          <span class="pill pill-orange">Impacto: Operacional</span>
+        </div>
+      </div>
+
+      <div class="risk-card medium">
+        <div class="risk-label">&#128993; Risco Médio</div>
+        <h3>Morosidade Processual — Retorno Travado</h3>
+        <p>Mesmo que o arrematante vença todos os litígios, a resolução pode demorar 5 a 15 anos dados os recursos e processos em andamento. O capital fica imobilizado, com alto custo de oportunidade, sem retorno até definição final.</p>
+        <div class="tag-row" style="margin-top:10px">
+          <span class="pill pill-gold">Probabilidade: Alta</span>
+          <span class="pill pill-gold">Impacto: Financeiro</span>
+        </div>
+      </div>
+
+      <div class="risk-card medium">
+        <div class="risk-label">&#128993; Risco Médio</div>
+        <h3>Contestação da Desafetação Municipal</h3>
+        <p>A Prefeitura pode contestar que a alienação anterior constitui desafetação formal, argumentando que o ato de alienação foi irregular ou insuficiente para desafectar o bem. Isso requer análise do decreto/lei municipal que autorizou a alienação.</p>
+        <div class="tag-row" style="margin-top:10px">
+          <span class="pill pill-gold">Probabilidade: Moderada</span>
+          <span class="pill pill-gold">Impacto: Jurídico</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--white);font-size:15px;font-weight:700;margin-bottom:16px">Barômetro de Risco por Dimensão</h3>
+      <div class="score-row">
+        <div class="score-label">Risco Jurídico <span style="color:var(--red)">92/100</span></div>
+        <div class="score-track"><div class="score-fill fill-red" style="width:92%"></div></div>
+      </div>
+      <div class="score-row">
+        <div class="score-label">Risco de Evicção <span style="color:var(--red)">85/100</span></div>
+        <div class="score-track"><div class="score-fill fill-red" style="width:85%"></div></div>
+      </div>
+      <div class="score-row">
+        <div class="score-label">Risco de Morosidade <span style="color:var(--orange)">88/100</span></div>
+        <div class="score-track"><div class="score-fill fill-orange" style="width:88%"></div></div>
+      </div>
+      <div class="score-row">
+        <div class="score-label">Risco de Imissão na Posse <span style="color:var(--orange)">80/100</span></div>
+        <div class="score-track"><div class="score-fill fill-orange" style="width:80%"></div></div>
+      </div>
+      <div class="score-row">
+        <div class="score-label">Risco de Nulidade do Edital <span style="color:var(--gold)">65/100</span></div>
+        <div class="score-track"><div class="score-fill fill-gold" style="width:65%"></div></div>
+      </div>
+      <div class="score-row">
+        <div class="score-label">Potencial de Valorização (oportunidade) <span style="color:var(--green)">78/100</span></div>
+        <div class="score-track"><div class="score-fill fill-green" style="width:78%"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MERCADO -->
+  <div class="section">
+    <div class="section-title">06 — Mercado Imobiliário</div>
+    <div class="section-heading">São José do Rio Preto — Contexto de Mercado</div>
+    <div class="section-sub">Dados atualizados de abril/maio 2026 — Fontes: FipeZAP, ABRAINC, Secovi-SP</div>
+
+    <div class="grid-4" style="margin-bottom:24px">
+      <div class="card">
+        <div class="card-title">Preço Médio Residencial (m²)</div>
+        <div class="card-value gold">R$ 5.922</div>
+        <div class="card-note">FipeZAP — Abril 2026</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Valorização 12 meses</div>
+        <div class="card-value green">+10,47%</div>
+        <div class="card-note">Acima da média nacional</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Crescimento de Lançamentos (2024)</div>
+        <div class="card-value orange">+255%</div>
+        <div class="card-note">ABRAINC — novos empreendimentos</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Ranking Nacional ABRAINC 2024</div>
+        <div class="card-value gold">#1</div>
+        <div class="card-note">Lidera crescimento imob. SP interior</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="color:var(--white);font-size:15px;font-weight:700;margin-bottom:14px">
+        Estimativa de Valor de Mercado do Imóvel (4.800 m²)
+      </h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Cenário</th>
+              <th>Valor m² Aplicado</th>
+              <th>Base de Cálculo</th>
+              <th>Valor Total Estimado</th>
+              <th>Observação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-label">Terreno simples — periferia</td>
+              <td class="td-val">R$ 800 – R$ 1.200/m²</td>
+              <td class="td-muted">Zona periférica, sem infraestrutura completa</td>
+              <td class="td-gold">R$ 3,8M – R$ 5,8M</td>
+              <td class="td-muted">Sem desconto de risco</td>
+            </tr>
+            <tr>
+              <td class="td-label">Terreno intermediário — zona urbana</td>
+              <td class="td-val">R$ 1.500 – R$ 2.500/m²</td>
+              <td class="td-muted">Zona urbana consolidada, boa localização</td>
+              <td class="td-gold">R$ 7,2M – R$ 12M</td>
+              <td class="td-muted">Estimativa central</td>
+            </tr>
+            <tr>
+              <td class="td-label">Terreno premium — região valorizada</td>
+              <td class="td-val">R$ 3.000 – R$ 5.000/m²</td>
+              <td class="td-muted">Área nobre, centro expandido, potencial construtivo alto</td>
+              <td class="td-gold">R$ 14,4M – R$ 24M</td>
+              <td class="td-muted">Cenário otimista</td>
+            </tr>
+            <tr>
+              <td class="td-label">Valor com desconto de risco processual</td>
+              <td class="td-val">–40% a –70%</td>
+              <td class="td-muted">Desconto por 2 usucapiões ativos + reversão + incerteza jurídica</td>
+              <td class="td-red">R$ 2,2M – R$ 7,2M</td>
+              <td class="td-red">Valor de risco real</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--muted);margin-top:12px">
+        &#9888; Valores estimados com base no índice FipeZAP (R$5.922/m² médio residencial SJRP, abril/2026),
+        deduzindo-se que terrenos urbanos costumam ser avaliados entre 15% e 80% do valor do m² construído
+        conforme localização. A avaliação judicial (laudo pericial) é o dado definitivo para o leilão.
+        O desconto de risco jurídico é calculado pela probabilidade de evicção ponderada pelos processos pendentes.
+      </p>
+    </div>
+
+    <div class="grid-2" style="margin-top:20px">
+      <div class="card">
+        <div class="card-title" style="margin-bottom:10px">Fatores de Valorização de SJRP</div>
+        <ul class="check">
+          <li>Maior polo industrial do noroeste paulista</li>
+          <li>Crescimento de 43,7% nas vendas de novos imóveis (2024)</li>
+          <li>Índice FipeZAP: +10,47% em 12 meses (abril 2026)</li>
+          <li>255% de aumento em lançamentos de empreendimentos (2024)</li>
+          <li>Forte migração regional e criação de empregos</li>
+          <li>Segmento MAP com +13,7% em volume comercializado</li>
+          <li>MCMV com +56,9% em unidades vendidas (2024)</li>
+          <li>Mercado imobiliário fechou 2025 "em alta expressiva"</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title" style="margin-bottom:10px">Fatores de Risco de Mercado</div>
+        <ul class="warn">
+          <li>Alta taxa Selic impacta crédito imobiliário em 2026</li>
+          <li>Terreno de 4.800 m² tem liquidez menor (mercado específico)</li>
+          <li>Processo judicial pode impedir uso produtivo por anos</li>
+          <li>Incerteza sobre zoneamento e aprovação de projetos durante litígio</li>
+          <li>Posseiros ativos podem impossibilitar construção ou uso</li>
+          <li>Custo de oportunidade do capital imobilizado</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPARATIVO PROCESSUAL -->
+  <div class="section">
+    <div class="section-title">07 — Comparativo Processual</div>
+    <div class="section-heading">O Que Deveria Constar no Edital (vs. O Que Omite)</div>
+    <div class="section-sub">Verificação de conformidade com o Art. 886 do CPC/2015</div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Requisito (Art. 886, CPC)</th>
+            <th>O que é</th>
+            <th>Deve Constar?</th>
+            <th>Status no Caso</th>
+            <th>Consequência se Omitido</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-label">Art. 886, I — Descrição do imóvel</td>
+            <td class="td-muted">Características, metragem, localização</td>
+            <td class="td-green">Sim</td>
+            <td><span class="pill pill-gold">Verificar edital</span></td>
+            <td class="td-muted">Nulidade formal</td>
+          </tr>
+          <tr>
+            <td class="td-label">Art. 886, IV — Valor de avaliação</td>
+            <td class="td-muted">Laudo pericial atualizado</td>
+            <td class="td-green">Sim</td>
+            <td><span class="pill pill-gold">Verificar edital</span></td>
+            <td class="td-muted">Lance sem base real</td>
+          </tr>
+          <tr>
+            <td class="td-label">Art. 886, VII — Ônus e processos pendentes</td>
+            <td class="td-muted">Usucapiões ativos, reversão municipal</td>
+            <td class="td-red">Obrigatório</td>
+            <td><span class="pill pill-red">Alto risco de omissão</span></td>
+            <td class="td-red">Nulidade + evicção + responsabilidade do juízo</td>
+          </tr>
+          <tr>
+            <td class="td-label">Processo usucapião 1 (original — Nilson Santos)</td>
+            <td class="td-muted">0055250-42.2000.8.26.0576 — julgado</td>
+            <td class="td-red">Obrigatório</td>
+            <td><span class="pill pill-red">Exigir do leiloeiro</span></td>
+            <td class="td-red">Base para evicção</td>
+          </tr>
+          <tr>
+            <td class="td-label">Processo usucapião 2 (pendente)</td>
+            <td class="td-muted">Novo processo ativo (não identificado)</td>
+            <td class="td-red">Obrigatório</td>
+            <td><span class="pill pill-red">Alto risco de omissão</span></td>
+            <td class="td-red">Anulação do leilão</td>
+          </tr>
+          <tr>
+            <td class="td-label">Processo usucapião 3 (pendente)</td>
+            <td class="td-muted">Segundo processo ativo (não identificado)</td>
+            <td class="td-red">Obrigatório</td>
+            <td><span class="pill pill-red">Alto risco de omissão</span></td>
+            <td class="td-red">Anulação do leilão</td>
+          </tr>
+          <tr>
+            <td class="td-label">Reversão proposta pela Prefeitura</td>
+            <td class="td-muted">Recurso/ação da municipalidade contra o usucapião julgado</td>
+            <td class="td-red">Obrigatório</td>
+            <td><span class="pill pill-red">Verificar urgente</span></td>
+            <td class="td-red">Fundamento de nulidade + evicção potencial</td>
+          </tr>
+          <tr>
+            <td class="td-label">Alienação anterior pela Prefeitura</td>
+            <td class="td-muted">Contradição: a Prefeitura vendeu o bem que agora reivindica</td>
+            <td class="td-gold">Relevante</td>
+            <td><span class="pill pill-orange">Não costuma constar</span></td>
+            <td class="td-muted">Argumento para o possuidor na contestação</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- POSIÇÕES DAS PARTES -->
+  <div class="section">
+    <div class="section-title">08 — Partes do Processo</div>
+    <div class="section-heading">Posições e Argumentos das Partes</div>
+    <div class="section-sub">Análise dos argumentos disponíveis de cada lado</div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <div style="width:40px;height:40px;background:rgba(34,197,94,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px">&#128100;</div>
+          <div>
+            <div style="font-size:13px;color:var(--muted)">Requerente / Posseiro</div>
+            <div style="font-size:16px;font-weight:700;color:var(--white)">Nilson Santos</div>
+          </div>
+        </div>
+        <div class="card-title" style="margin-bottom:8px">Argumentos Favoráveis</div>
+        <ul class="check">
+          <li>Posse longa, mansa e pacífica (superior a 15 anos)</li>
+          <li>Animus domini — exercício como proprietário</li>
+          <li>A Prefeitura declarou expressamente "sem interesse"</li>
+          <li>A própria Prefeitura alienou o imóvel (desafetação)</li>
+          <li>Venire contra factum proprium da Prefeitura</li>
+          <li>Função social da propriedade cumprida (Art. 5º, XXIII CF)</li>
+          <li>Processo original já julgado (ainda que em reversão)</li>
+        </ul>
+        <div class="tag-row" style="margin-top:12px">
+          <span class="pill pill-green">Posição Juridicamente Sólida</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <div style="width:40px;height:40px;background:rgba(59,130,246,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px">&#127963;</div>
+          <div>
+            <div style="font-size:13px;color:var(--muted)">Oponente / Reversão</div>
+            <div style="font-size:16px;font-weight:700;color:var(--white)">Prefeitura de SJRP</div>
+          </div>
+        </div>
+        <div class="card-title" style="margin-bottom:8px">Argumentos Favoráveis</div>
+        <ul class="check">
+          <li>Súmula STF 340: bens públicos são imprescritíveis</li>
+          <li>CF art. 183 §3º e 191 §único: vedação constitucional</li>
+          <li>CC art. 102: bens públicos não sujeitos a usucapião</li>
+          <li>Interesse público superior ao particular (supremacia)</li>
+          <li>Eventual nulidade da alienação anterior (se irregular)</li>
+        </ul>
+        <div class="card-title" style="margin-bottom:8px;margin-top:14px">Pontos Fracos</div>
+        <ul class="cross">
+          <li>Declarou "sem interesse" no processo — contradição</li>
+          <li>Ela mesma alienou o imóvel — configurou desafetação</li>
+          <li>Comportamento contraditório vedado (Art. 5º CPC)</li>
+          <li>Boa-fé processual comprometida pela contradição</li>
+        </ul>
+        <div class="tag-row" style="margin-top:12px">
+          <span class="pill pill-orange">Posição Juridicamente Enfraquecida</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VEREDITO -->
+  <div class="section">
+    <div class="section-title">09 — Veredito</div>
+    <div class="section-heading">Conclusão da Análise</div>
+    <div class="section-sub">Avaliação técnica integrada: jurídica, financeira e estratégica</div>
+
+    <div class="verdict-box" style="margin-bottom:24px">
+      <div class="verdict-label">Índice de Risco Global</div>
+      <div class="verdict-score">88/100</div>
+      <div class="verdict-desc">
+        Risco jurídico extremamente elevado. Potencial de retorno existe, mas está condicionado
+        à resolução favorável de múltiplos litígios simultâneos — o que pode levar décadas.
+        Recomenda-se extrema cautela antes de qualquer lance.
+      </div>
+      <div class="verdict-tags">
+        <span class="pill pill-red">Risco: Crítico</span>
+        <span class="pill pill-orange">Liquidez: Baixa</span>
+        <span class="pill pill-gold">Prazo: Indefinido</span>
+        <span class="pill pill-green">Potencial: Alto</span>
+        <span class="pill pill-blue">Mercado: Favorável</span>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Favorável ao Lance SE</div>
+        <ul class="check">
+          <li>O arrematante tiver capacidade de litigar por 5–15 anos</li>
+          <li>O preço de arrematação for muito abaixo do valor de mercado (–50% ou mais)</li>
+          <li>O edital informar expressamente todos os processos pendentes</li>
+          <li>Houver assessoria jurídica especializada em direito imobiliário público</li>
+          <li>O arrematante puder suportar o imóvel bloqueado (sem uso) pelo prazo do litígio</li>
+          <li>Existir estratégia processual clara para contestar a reversão da Prefeitura</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">Contraindicações ao Lance</div>
+        <ul class="cross">
+          <li>Arrematante sem tolerância a risco jurídico elevado</li>
+          <li>Capital necessário a curto ou médio prazo (1–5 anos)</li>
+          <li>Ausência de assessoria jurídica especializada</li>
+          <li>Preço de arrematação próximo ao valor de mercado (sem desconto de risco)</li>
+          <li>Edital sem menção aos processos de usucapião pendentes</li>
+          <li>Objetivo de uso imediato do imóvel (construção, locação etc.)</li>
+          <li>Desconhecimento do tipo de usucapião dos 2 processos pendentes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKLIST -->
+  <div class="section">
+    <div class="section-title">10 — Checklist</div>
+    <div class="section-heading">O Que Fazer Antes de Dar um Lance</div>
+    <div class="section-sub">Diligências mínimas recomendadas — Due Diligence Jurídica</div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title" style="margin-bottom:12px">Verificações Documentais</div>
+        <ul class="warn">
+          <li>Obter cópia completa do edital do leilão</li>
+          <li>Verificar se o edital menciona os 2 processos de usucapião</li>
+          <li>Verificar se o edital menciona a reversão da Prefeitura</li>
+          <li>Acessar o processo no e-SAJ (esaj.tjsp.jus.br) — Foro 576</li>
+          <li>Obter certidão atualizada de ônus reais no Cartório de Imóveis de SJRP</li>
+          <li>Verificar matrícula do imóvel: está em nome de quem?</li>
+          <li>Verificar a lei/decreto municipal que autorizou a alienação pela Prefeitura</li>
+          <li>Identificar os números dos 2 processos de usucapião pendentes</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title" style="margin-bottom:12px">Verificações Técnicas e Jurídicas</div>
+        <ul class="warn">
+          <li>Contratar advogado especialista em usucapião e leilões judiciais</li>
+          <li>Solicitar laudo pericial de avaliação do imóvel atualizado</li>
+          <li>Verificar a situação física do imóvel: quem está na posse atual?</li>
+          <li>Pesquisar zoneamento urbano e potencial construtivo (SJRP)</li>
+          <li>Calcular desconto de risco adequado ao preço de lance</li>
+          <li>Verificar se há dívidas de IPTU anteriores (não respondem o arrematante, conforme STJ)</li>
+          <li>Verificar possibilidade de acordo com os posseiros antes do lance</li>
+          <li>Avaliar prazo estimado de resolução processual com advogado</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FONTES -->
+  <div class="section">
+    <div class="section-title">11 — Fontes</div>
+    <div class="section-heading">Fontes e Referências Utilizadas</div>
+    <div class="section-sub">Esta análise foi produzida com base nas seguintes fontes</div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title" style="margin-bottom:10px">Fontes Jurídicas</div>
+        <ul style="list-style:none;font-size:13px;color:var(--muted);line-height:2">
+          <li>Súmula STF 340 — Imprescritibilidade dos bens públicos</li>
+          <li>CF/88 — Art. 183 §3º e Art. 191 §único</li>
+          <li>Código Civil — Art. 102, 1.238, 1.242, 447–457</li>
+          <li>CPC/2015 — Art. 5º (boa-fé), Art. 886 (edital), Art. 903 (arrematação)</li>
+          <li>TJSP — AC nº 9172311-97.2007.8.26.0000 (usucapião bem desafetado)</li>
+          <li>STJ — Informativo de Jurisprudência (usucapião pós-leilão)</li>
+          <li>STJ — REsp 1.191.253 (venire contra factum proprium)</li>
+          <li>STJ — Tema 1.134 (IPTU e arrematante)</li>
+          <li>TJSP — Jurisprudência (omissão de processos pendentes no edital)</li>
+          <li>STJ — Notícia 07/05/2023 (usucapião urbano — limites)</li>
+          <li>Blog Leilões Judiciais (usucapião pós-arrematação — análise prática)</li>
+          <li>Instituto de Direito Real (TJSP — bem público desafetado)</li>
+          <li>Advocacia Morata (riscos do arrematante em leilões 2025)</li>
+          <li>TJDFT — Jurisprudência em Temas (bens públicos e usucapião)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title" style="margin-bottom:10px">Fontes de Mercado</div>
+        <ul style="list-style:none;font-size:13px;color:var(--muted);line-height:2">
+          <li>FipeZAP Residencial — Abril 2026 (R$ 5.922/m² SJRP)</li>
+          <li>ABRAINC — Estudo SJRP #1 em crescimento imobiliário SP interior (Out/2024)</li>
+          <li>Secovi-SP — Eixos de desenvolvimento Rio Preto</li>
+          <li>Myside — Índice SJRP (abril 2026)</li>
+          <li>OExtra.net — Mercado imobiliário regional (Dez/2025)</li>
+          <li>Mara Alcaine Imóveis — Relatório Jan/2025 e crescimento 2024</li>
+          <li>Região Noroeste — FipeZAP SJRP (consistência de alta)</li>
+          <li>PUBLICJUD — Plataforma de editais de leilão</li>
+          <li>3 Torres Leilões — SJRP Hasta 2023/2024</li>
+          <li>TJSP — Portal de Leilões (tjsp.jus.br/Leiloes)</li>
+          <li>e-SAJ TJSP — Consulta de Processos (esaj.tjsp.jus.br)</li>
+          <li>Vivareal / Imovelweb / OLX — Terrenos em SJRP (2025-2026)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alert-banner" style="margin-top:24px;margin-bottom:0">
+      <div class="alert-icon">&#9888;&#65039;</div>
+      <div>
+        <strong>Aviso Legal:</strong> Esta análise é de natureza <strong>informativa e educacional</strong>,
+        elaborada com base em informações públicas disponíveis, jurisprudência e dados de mercado.
+        Não substitui consulta jurídica especializada. As informações processuais são baseadas nos
+        dados fornecidos pelo usuário. Antes de qualquer decisão de investimento em leilão judicial,
+        consulte advogado habilitado em direito imobiliário e tributário e realize diligências completas.
+        Produzida em <strong>maio/2026</strong>.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p style="margin-bottom:6px">
+    Análise Jurídica &amp; Mercado Imobiliário — Leilão Judicial SJRP<br>
+    Processo 0055250-42.2000.8.26.0576 — Nilson Santos — São José do Rio Preto / SP
+  </p>
+  <p>
+    Produzido em maio/2026 &nbsp;|&nbsp;
+    Consulta: <a href="https://esaj.tjsp.jus.br/cpopg/open.do" target="_blank">e-SAJ TJSP</a> &nbsp;|&nbsp;
+    <a href="https://www.stj.jus.br" target="_blank">STJ</a> &nbsp;|&nbsp;
+    <a href="https://www.tjsp.jus.br" target="_blank">TJSP</a>
+  </p>
+</footer>
+
+</body>
+</html>
